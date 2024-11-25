@@ -41,10 +41,65 @@
 */
 void 
 getMinMax(int *ptrMin, int *ptrMax)
-{
+{ 
+  int a, b, num;
+  scanf("%d",&num);
+ 
+  while (num != 0) {
+    min  = num;
+    max  = num;
+
+    if (num < min)
+      min  = num;
+    if (num > max)
+      max = num;
+
+    scanf("%d", &num);
+  }
+  *ptrMin = min;
+  *ptrMax = max;
 	/* you may declare your own local variable/s */
+/*
+void 
+getMinMax(int *ptrMin, int *ptrMax)
+{ 
+    int num;
+    int a, b;  // Variables to store the minimum and maximum
 
+    // Read the first input
+    printf("Input an integer: ");
+    scanf("%d", &num);
 
+    if (num == 0) {  // Handle the case where the first input is the sentinel value
+        printf("No valid input provided.\n");
+        *ptrMin = 0;
+        *ptrMax = 0;
+        return;
+    }
+
+    // Initialize both minimum and maximum to the first valid input
+    a = num;
+    b = num;
+
+    // Loop to process subsequent inputs
+    while (1) {
+        printf("Input an integer: ");
+        scanf("%d", &num);
+
+        if (num == 0) // Stop when sentinel value is entered
+            break;
+
+        if (num < a)  // Update minimum
+            a = num;
+        if (num > b)  // Update maximum
+            b = num;
+    }
+
+    // Assign the final minimum and maximum values
+    *ptrMin = a;
+    *ptrMax = b;
+}
+*/
 	/* NOTE: This problem should be solved using a single loop only. */
 
 }

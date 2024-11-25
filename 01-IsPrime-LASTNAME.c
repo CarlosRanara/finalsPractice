@@ -24,14 +24,24 @@
 *  IsPrime(101) returns 1.
 *
 */
-int 
+ int 
 IsPrime(int n)
 {
-	/* you may declare your own local variable/s */
-	
+  int total, i, j = 1; //assume it is a prime number
+  if (n < 2) // we know that 0 & 1 is a prime number but anything divided by them is equal to a remainder of 0
+    j = 0; // not prime
 
+  for (i = 2; i < n && j == 1; i++){
+    total = n % i; // check from 2 to the number before n
+
+    if (total == 0) // number found have no remainder
+      j = 0;
+
+    else 
+      j = 1;
+  }
+  return j;
 }
-
 
 
 /*
