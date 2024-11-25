@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> 
 
 /*
 	Task: Implement the generateTeamNumbers() function
@@ -8,13 +8,30 @@
 	
 	@param: teams - number of teams to generate jerseys for
 */
-void generateTeamNumbers(int teams) {
+void generateTeamNumbers(int teams) 
+{
+        int i = 0, j = 0;
+        for (i = 1; i <= teams; i++) {
+               
+                printf ("Team %d: \n", i);
+                
+                for (j = 1; j <= 8; j++){
+                        printf("%02d ", i * j);
 
+                        if (j % 4 == 0){
+                                printf("\n");
+                        }
+                }
+
+                printf("\n");
+        }
+        
 }
 
-int main(){
+int main()
+{
 
-	int teams;
+        int teams;
 	
 	printf("How many teams? ");
 	scanf("%d", &teams);
